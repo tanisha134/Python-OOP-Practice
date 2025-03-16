@@ -15,17 +15,17 @@ class Friend:
     def adding_frnd(self,friend_name):
         if friend_name not in self.Friends:
             self.Friends.append(friend_name)
-            print(f"Your Friend {friend_name} is added in your friend list Successfully")
+            return f"Your Friend {friend_name} is added in your friend list Successfully"
         else:
-            print(f"This friend is already in the friend list Tanisha , So You can not add her <3333")
+            return f"This friend is already in the friend list Tanisha , So You can not add her <3333"
 
     #For Removing a friend
     def remove_frnd(self,friend_name):
         if friend_name in self.Friends:
             self.Friends.remove(friend_name)
-            print(f"Your {friend_name} is now deleted from your frnd list Tanisha")
+            return f"Your {friend_name} is now deleted from your frnd list Tanisha"
         else:
-            print(f"Your {friend_name} is not in the frnd list , so you can't remove her<333")
+            return f"Your {friend_name} is not in the frnd list , so you can't remove her<333"
 
     #For Showing The frnd List
     def Show_frnds(self):
@@ -48,10 +48,10 @@ class Friend:
                 print(self.find_frnd(friend_name))
             elif choice == "2":
                 friend_name = input("Enter a New friend that you want to add Tanisha : ").strip().lower()
-                self.adding_frnd(friend_name)
+                print(self.adding_frnd(friend_name))
             elif choice == "3":
                 friend_name = input("Enter a friend name that you want to remove Tanisha : ").strip().lower()
-                self.remove_frnd(friend_name)
+                print(self.remove_frnd(friend_name))
             elif choice == "4":
                 print("Thanks for being my friends. That's all Bye <333")
                 break
